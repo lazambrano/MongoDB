@@ -10,7 +10,7 @@ mongo = PyMongo(app, uri="mongodb://localhost:27017/craigslist_app")
 @app.route("/")
 def home():
     mars_data = mongo.db.mars.find_one()
-    return render_template("index.html", mars_data=mars_data)
+    return render_template("Index.html", mars_data=mars_data)
 
 @app.route("/scrape")
 def scraper():
